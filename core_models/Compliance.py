@@ -17,6 +17,7 @@ class Compliance:
     self.pres = 0                       # holds the transmural pressure in mmHg
     self.recoil_pressure = 0            # holds the recoil pressure in mmHg
     self.pres_outside = 0               # holds the pressure which is exerted on the compliance from the outside
+    self.p_atm = 0
     self.el_base = 1                    # holds the baseline elastance
     self.el_k = 0                       # holds the constant for the non-linear elastance function
     self.initialized = False
@@ -44,7 +45,7 @@ class Compliance:
       self.recoil_pressure = vol_above_unstressed * elastance
 
       # calculate the transmural pressure
-      self.pres = self.recoil_pressure + self.pres_outside
+      self.pres = self.recoil_pressure + self.pres_outside + self.p_atm
 
 
   def volume_in (self, dvol, comp_from):

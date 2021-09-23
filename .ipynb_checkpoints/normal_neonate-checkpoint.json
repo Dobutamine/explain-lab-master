@@ -709,7 +709,7 @@
          "name":"OUT",
          "description":"outside air",
          "model_type":"Compliance",
-          "content":"gas",
+         "content":"gas",
          "is_enabled":true,
          "vol":1000000,
          "u_vol":1000000,
@@ -995,7 +995,19 @@
          "gas_constant":62.36367,
          "temp_room":20,
          "p_atm": 760,
-         "compounds":{
+         "fh2o_settings": {
+             "ALL": 0.063,
+             "ALR": 0.063,
+             "NCA": 0.063,
+             "OUT": 0.01
+         },
+         "temp_settings": {
+             "ALL": 37,
+             "ALR": 37,
+             "NCA": 35,
+             "OUT": 20
+         },
+         "dry_air":{
             "fo2":0.2095,
             "fargon":0.0092,
             "fco2":0.0004,
