@@ -31,3 +31,37 @@ ls
 rm -r jupyter-explain_admin
 rm -r jupyter-lex_van_loon
 rm -r jupyter-test_user
+ls
+nano .gitignore
+git init
+git add
+git add .
+git status
+git commit 
+git config --global user.email "tim.antonius@outlook.com"
+git config --global user.name "Dobutamine"
+git commit
+git status
+git add .
+git status
+git commit
+git status
+git remote add origin https://github.com/Dobutamine/explain-lab-master.git
+git branch -M main
+git push -u origin main
+ls
+cd __pycache__
+ls
+nano .gitignore
+cd ..
+nano .gitignore
+git commit
+git add .
+git commit
+git push -u origin main
+git status
+git status add
+git add
+git add .
+git commit -a
+git push

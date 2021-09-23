@@ -47,7 +47,6 @@ class Compliance:
       # calculate the transmural pressure
       self.pres = self.recoil_pressure + self.pres_outside + self.p_atm
 
-
   def volume_in (self, dvol, comp_from):
     # this method is called when volume is added to this components
     if self.is_enabled:

@@ -27,16 +27,15 @@ class Blood:
         setattr(component, 'initialized', True)
     
     def mix_blood(self, dvol, comp_to, comp_from):
-        counter = 0
-        for compound in comp_to.compound_concentrations:
-            current_conc = comp_to.compound_concentrations[counter]
+        for index, compound in enumerate(comp_to.compound_concentrations):
+            current_conc = comp_to.compound_concentrations[index]
             current_vol = comp_to.vol
-            d_compound = (comp_from.compound_concentrations[counter] - current_conc) * dvol
+            d_compound = (comp_from.compound_concentrations[index] - current_conc) * dvol
             if current_vol > 0:
-                comp_to.compound_concentrations[counter] = (current_conc * current_vol + d_compound) / current_vol
+                comp_to.compound_concentrations[index] = (current_conc * current_vol + d_compound) / current_vol
             else:
-                comp_to.compound_concentrations[counter] = 0
-            counter += 1
+                comp_to.compound_concentrations[index] = 0
+  
     
 
 
