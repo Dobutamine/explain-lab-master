@@ -1,0 +1,20 @@
+{
+   "name":"",
+   "description":"",
+   "weight": 0,
+   "model_time_total": 0,
+   "modeling_stepsize": 0.0005,
+   "components": {
+       "Example": {
+         "name":"test",
+         "description":"test model component",
+         "model_type":"Compliance",
+         "content":"blood",
+         "is_enabled":true,
+         "vol":0.00455400,
+         "u_vol":0.00296010,
+         "el_base":28232,
+         "el_k":0
+      }
+   }
+}

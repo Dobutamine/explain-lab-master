@@ -1,0 +1,1 @@
+{"weak": ["pypy3.7 >=7.3.5", "python_abi 3.7 *_pypy37_pp73"], "noarch": ["python >=3.7,<3.8.0a0"]}

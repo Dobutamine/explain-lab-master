@@ -1,0 +1,19 @@
+{
+  "arch": "x86_64",
+  "build": "2_pypy37_pp73",
+  "build_number": 2,
+  "constrains": [
+    "python 3.7.* *_73_pypy"
+  ],
+  "depends": [
+    "pypy3.7 7.3.*"
+  ],
+  "license": "BSD-3-Clause",
+  "license_family": "BSD",
+  "name": "python_abi",
+  "platform": "linux",
+  "subdir": "linux-64",
+  "timestamp": 1624472006756,
+  "track_features": "pypy",
+  "version": "3.7"
+}

@@ -1,0 +1,33 @@
+# This file created by conda-build 3.21.4
+# meta.yaml template originally from:
+# /home/conda/recipe_root, last modified Wed Jun 23 18:11:46 2021
+# ------------------------------------------------
+
+package:
+  name: python_abi
+  version: '3.7'
+build:
+  number: '2'
+  string: 2_pypy37_pp73
+  track_features:
+    - pypy
+requirements:
+  build: []
+  run:
+    - pypy3.7 7.3.*
+  run_constrained:
+    - python 3.7.* *_73_pypy
+test:
+  commands:
+    - pypy3 --version
+about:
+  home: https://github.com/conda-forge/python_abi-feedstock
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: LICENSE
+  summary: Metapackage to select python implementation
+extra:
+  copy_test_source_files: true
+  final: true
+  recipe-maintainers:
+    - isuruf

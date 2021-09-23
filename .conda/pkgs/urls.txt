@@ -1,0 +1,17 @@
+https://repo.anaconda.com/pkgs/main/linux-64/libgcc-ng-9.3.0-h5101ec6_17.conda
+https://conda.anaconda.org/conda-forge/linux-64/libffi-3.3-h58526e2_2.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-64/readline-8.1-h46c0cb4_0.tar.bz2
+https://repo.anaconda.com/pkgs/main/linux-64/_openmp_mutex-4.5-1_gnu.tar.bz2
+https://repo.anaconda.com/pkgs/main/linux-64/expat-2.4.1-h2531618_2.conda
+https://conda.anaconda.org/conda-forge/linux-64/gdbm-1.18-h0a1914f_2.tar.bz2
+https://repo.anaconda.com/pkgs/main/linux-64/openssl-1.1.1l-h7f8727e_0.conda
+https://conda.anaconda.org/conda-forge/linux-64/sqlite-3.36.0-h9cd32fc_0.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-64/python-3.7.10-1_73_pypy.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-64/ncurses-6.2-h58526e2_4.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-64/certifi-2021.5.30-py37h9c2f6ca_0.tar.bz2
+https://repo.anaconda.com/pkgs/main/linux-64/libgomp-9.3.0-h5101ec6_17.conda
+https://conda.anaconda.org/conda-forge/linux-64/xz-5.2.5-h516909a_1.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-64/python_abi-3.7-2_pypy37_pp73.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-64/tk-8.6.11-h21135ba_0.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-64/conda-4.10.3-py37h9c2f6ca_1.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-64/pypy3.7-7.3.5-hc4e864a_7.tar.bz2

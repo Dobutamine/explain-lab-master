@@ -1,0 +1,25 @@
+{
+  "arch": "x86_64",
+  "build": "py37h9c2f6ca_0",
+  "build_number": 0,
+  "channel": "https://conda.anaconda.org/conda-forge/linux-64",
+  "constrains": [],
+  "depends": [
+    "pypy3.7 >=7.3.4",
+    "python >=3.7,<3.8.0a0",
+    "python_abi 3.7 *_pypy37_pp73"
+  ],
+  "features": "",
+  "fn": "certifi-2021.5.30-py37h9c2f6ca_0.tar.bz2",
+  "license": "ISC",
+  "md5": "58970a3cac8138035ad3c3d7a6e78e10",
+  "name": "certifi",
+  "platform": "linux",
+  "sha256": "9bd7a4836cabf339ee86faf7b1f4b797fd46af5298838217ca932f2602ebe3d6",
+  "size": 144864,
+  "subdir": "linux-64",
+  "timestamp": 1622399378069,
+  "track_features": "",
+  "url": "https://conda.anaconda.org/conda-forge/linux-64/certifi-2021.5.30-py37h9c2f6ca_0.tar.bz2",
+  "version": "2021.5.30"
+}

@@ -1,0 +1,16 @@
+{
+  "arch": "x86_64",
+  "build": "py37h9c2f6ca_0",
+  "build_number": 0,
+  "depends": [
+    "pypy3.7 >=7.3.4",
+    "python >=3.7,<3.8.0a0",
+    "python_abi 3.7 *_pypy37_pp73"
+  ],
+  "license": "ISC",
+  "name": "certifi",
+  "platform": "linux",
+  "subdir": "linux-64",
+  "timestamp": 1622399378069,
+  "version": "2021.5.30"
+}
