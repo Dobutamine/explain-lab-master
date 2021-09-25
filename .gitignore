@@ -10,3 +10,4 @@ __pycache__/
 .cloud-locale-test.skip
 .profile
 .cache/
+.gitconfig
