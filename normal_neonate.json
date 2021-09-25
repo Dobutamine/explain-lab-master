@@ -724,7 +724,7 @@
          "content":"gas",
          "is_enabled":true,
          "fixed_composition": false,
-         "vol":0.005031868904299781,
+         "vol":0.005,
          "u_vol":0.005,
          "el_base":40000,
          "el_k":0
@@ -736,7 +736,7 @@
          "content":"gas",
          "fixed_composition": false,
          "is_enabled":true,
-         "vol":0.043372423236693707,
+         "vol":0.03,
          "u_vol":0.03,
          "el_base":1000,
          "el_k":0
@@ -748,7 +748,7 @@
           "content":"gas",
          "is_enabled":true,
          "fixed_composition":false,
-         "vol":0.043372423236693707,
+         "vol":0.03,
          "u_vol":0.03,
          "el_base":1000,
          "el_k":0
@@ -922,15 +922,16 @@
          "model_type":"Breathing",
          "is_enabled":true,
          "spont_breathing_enabled":true,
-         "spont_resp_rate":20.52573656465455,
+         "spont_resp_rate":35,
          "ref_minute_volume":0.63,
          "ref_tidal_volume":0.018,
-         "target_minute_volume":0.8225647818957809,
-         "target_tidal_volume":0.01767977989456873,
+         "target_minute_volume":0.630,
+         "target_tidal_volume":0.018,
          "vtrr_ratio":0.00038,
-         "resp_muscle_pressure":-5.026490573324616,
+         "resp_muscle_pressure":-5,
          "max_amp":50,
-         "breath_duration":1000
+         "breath_duration":1000,
+         "targets": ["CHEST_L", "CHEST_R"]
       },
       "ans":{
          "name":"ans",
@@ -998,12 +999,6 @@
          "gas_constant":62.36367,
          "temp_room":20,
          "p_atm": 760,
-         "fh2o_settings": {
-             "ALL": 0.063,
-             "ALR": 0.063,
-             "NCA": 0.063,
-             "OUT": 0.01
-         },
          "temp_settings": {
              "ALL": 37,
              "ALR": 37,
@@ -1014,8 +1009,7 @@
             "fo2":0.2095,
             "fargon":0.0092,
             "fco2":0.0004,
-            "fn2":0.7809,
-            "fh2o": 0
+            "fn2":0.7809
          }
       },
       "lymph":{
@@ -1026,9 +1020,21 @@
          "compounds":{}
       }, 
       "breathing": {
-          "name":"breathing",
-          "description": "spontaneous breathing model",
-          "model_type": "Breathing"
+         "name":"breathing",
+         "description": "spontaneous breathing model",
+         "model_type": "Breathing",
+         "is_enabled": true,
+         "spont_breathing_enabled":true,
+         "spont_resp_rate": 35,
+         "ref_minute_volume":0.63,
+         "ref_tidal_volume":0.018,
+         "target_minute_volume":0.630,
+         "target_tidal_volume":0.018,
+         "vtrr_ratio":0.00038,
+         "resp_muscle_pressure": 0,
+         "max_amp": 50,
+         "breath_duration": 1,
+         "targets": ["CHEST_L","CHEST_R"] 
       },
       "acidbase":{
          "name":"acidbase",

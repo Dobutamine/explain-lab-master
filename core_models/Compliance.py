@@ -31,21 +31,21 @@ class Compliance:
 
   def model_step (self):
     # during every model step the transmural pressure is calculates
-    self.calculate_pressure()
+    if (self.is_enabled):
+        self.calculate_pressure()
         
   def calculate_pressure (self):
-    if self.is_enabled:
-      # calculate the volume above the unstressed volume
-      vol_above_unstressed = self.vol - self.u_vol
+    # calculate the volume above the unstressed volume
+    vol_above_unstressed = self.vol - self.u_vol
 
-      # calculate the elastance, which is volume dependent in a non-linear way
-      elastance = self.el_base + self.el_k * pow(vol_above_unstressed, 2)
+    # calculate the elastance, which is volume dependent in a non-linear way
+    elastance = self.el_base + self.el_k * pow(vol_above_unstressed, 2)
 
-      # calculate pressure in the compliance
-      self.recoil_pressure = vol_above_unstressed * elastance
+    # calculate pressure in the compliance
+    self.recoil_pressure = vol_above_unstressed * elastance
 
-      # calculate the transmural pressure
-      self.pres = self.recoil_pressure + self.pres_outside + self.p_atm
+    # calculate the transmural pressure
+    self.pres = self.recoil_pressure + self.pres_outside + self.p_atm
 
   def volume_in (self, dvol, comp_from):
     # this method is called when volume is added to this components

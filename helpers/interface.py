@@ -381,22 +381,6 @@ class Interface:
         if (hasattr(self.model.components[t[0]], t[1])):
           return { 'label': prop, 'model': self.model.components[t[0]], 'prop': t[1]}
 
-      if t[0] in self.model.time_varying_elastances:
-        if (hasattr(self.model.time_varying_elastances[t[0]], t[1])):
-          return { 'label': prop, 'model': self.model.time_varying_elastances[t[0]], 'prop': t[1]}
-      
-      if t[0] in self.model.resistors:
-        if (hasattr(self.model.resistors[t[0]], t[1])):
-          return { 'label': prop, 'model': self.model.resistors[t[0]], 'prop': t[1]}
-
-      if t[0] in self.model.valves:
-        if (hasattr(self.model.valves[t[0]], t[1])):
-          return { 'label': prop, 'model': self.model.valves[t[0]], 'prop': t[1]}
-
-      if t[0] in self.model.models:
-        if (hasattr(self.model.models[t[0]], t[1])):
-          return { 'label': prop, 'model': self.model.models[t[0]], 'prop': t[1]}
-
     return None
     
 class propChange:
