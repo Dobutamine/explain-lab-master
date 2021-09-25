@@ -1,2 +1,12 @@
 __pycache__/
 .conda/
+.ipynb_checkpoints/
+.ipython/profile_default/
+.jupyter/
+.local/share/jupyter/
+.bash_history
+.bash_logout
+.bash_rc
+.cloud-locale-test.skip
+.profile
+.cash/
