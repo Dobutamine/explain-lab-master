@@ -1,9 +1,0 @@
-{
-  "ncurses": "6.2",
-  "target_platform": "linux-64",
-  "c_compiler_version": "9",
-  "zlib": "1.2",
-  "readline": "8",
-  "c_compiler": "gcc",
-  "channel_targets": "conda-forge main"
-}
