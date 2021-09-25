@@ -1039,12 +1039,18 @@
       "acidbase":{
          "name":"acidbase",
          "description":"",
-         "model_type":"Acidbase"
+         "model_type":"Acidbase",
+         "is_enabled": true,
+         "targets": ["AA", "LL", "LR"] 
       },
       "oxygenation":{
          "name":"oxygenation",
          "description":"",
-         "model_type":"Oxygenation"
+         "model_type":"Oxygenation",
+         "is_enabled": true,
+         "targets": ["AA", "LL", "LR"], 
+         "dpg": 5,
+         "alpha_o2p": 0.0095 
       },
       "kidneys":{
          "name":"kidneys",
