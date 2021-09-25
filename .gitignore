@@ -9,4 +9,4 @@ __pycache__/
 .bash_rc
 .cloud-locale-test.skip
 .profile
-.cash/
+.cache/
