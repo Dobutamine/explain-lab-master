@@ -32,7 +32,6 @@ class Breathing:
         for key, value in args.items():
             setattr(self, key, value)
         
-        
         # get a reference to the rest of the model
         self.model = model
   

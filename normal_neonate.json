@@ -832,23 +832,23 @@
          "model_type":"Gasexchanger",
          "comp_blood":"LL",
          "comp_gas":"ALL",
-         "is_enabled":true,
-         "dif_o2":0.01,
-         "dif_co2":0.01,
-         "dif_n2":0.01,
-         "dif_other":0.01
+         "is_enabled":false,
+         "dif_o2":0.1,
+         "dif_co2":0.1,
+         "dif_n2":0.1,
+         "dif_other":0.1
       },
       "GASEX_LR":{
          "name":"GASEX_LR",
          "description":"gasexchange blood-gas right lung",
          "model_type":"Gasexchanger",
-         "comp_blood":"LR",
+         "comp_blood":"RL",
          "comp_gas":"ALR",
-         "is_enabled":true,
-         "dif_o2":0.01,
-         "dif_co2":0.01,
-         "dif_n2":0.01,
-         "dif_other":0.01
+         "is_enabled":false,
+         "dif_o2":0.1,
+         "dif_co2":0.1,
+         "dif_n2":0.1,
+         "dif_other":0.1
       },
       "ecg":{
          "name":"ecg",
@@ -884,8 +884,8 @@
          "name":"metabolism",
          "description":"metabolism",
          "model_type":"Metabolism",
-         "is_enabled":true,
-         "atp_need":0.14,
+         "is_enabled":false,
+         "atp_need":0.0,
          "resp_q":0.8,
          "p_atm":760,
          "outside_temp":20,
@@ -910,22 +910,16 @@
          "activation_delay":0,
          "a": 2
       },
-      "lungs":{
-         "name":"lungs",
-         "description":"lung model",
-         "model_type":"Lungs",
-         "is_enabled":false
-      },
       "breathing":{
          "name":"breathing",
          "description":"spontaneous breathing",
          "model_type":"Breathing",
          "is_enabled":true,
          "spont_breathing_enabled":true,
-         "spont_resp_rate":35,
+         "spont_resp_rate":45,
          "ref_minute_volume":0.63,
          "ref_tidal_volume":0.018,
-         "target_minute_volume":0.630,
+         "target_minute_volume":0.830,
          "target_tidal_volume":0.018,
          "vtrr_ratio":0.00038,
          "resp_muscle_pressure":-5,
@@ -982,10 +976,8 @@
          "description":"",
          "model_type":"Blood",
          "is_enabled":true,
-         "target_models": ["Compliance", "TimeVaryingElastance"],
-         "target_label": "blood", 
          "compounds":{
-            "to2":8,
+            "to2": 9.5,
             "tco2":25.18
          }
       },
@@ -994,11 +986,15 @@
          "description":"",
          "model_type":"Gas",
          "is_enabled":true,
-         "target_models": ["Compliance"],
-         "target_label": "gas", 
          "gas_constant":62.36367,
          "temp_room":20,
          "p_atm": 760,
+         "compounds": {
+             "o2": 0.2095,
+             "co2": 0.0004,
+             "argon": 0.0092,
+             "n2": 0.7809
+         },
          "temp_settings": {
              "ALL": 37,
              "ALR": 37,
@@ -1012,13 +1008,6 @@
             "fn2":0.7809
          }
       },
-      "lymph":{
-         "name":"lymph",
-         "description":"",
-         "model_type":"Lymph",
-         "is_enabled":false,
-         "compounds":{}
-      }, 
       "breathing": {
          "name":"breathing",
          "description": "spontaneous breathing model",
@@ -1040,24 +1029,25 @@
          "name":"acidbase",
          "description":"",
          "model_type":"Acidbase",
-         "is_enabled": true,
-         "targets": ["AA", "LL", "LR"] 
+         "is_enabled": false,
+         "targets": ["AA", "LL", "RL"],
+         "sid": 41.6,
+         "uma": 10.0,
+         "albumin": 30.0,
+         "phosphates": 1.5 
       },
       "oxygenation":{
          "name":"oxygenation",
          "description":"",
          "model_type":"Oxygenation",
-         "is_enabled": true,
-         "targets": ["AA", "LL", "LR"], 
-         "dpg": 5,
-         "alpha_o2p": 0.0095 
+         "is_enabled": false,
+         "targets": ["AA", "LL", "RL"],
+         "alpha_o2p": 0.0095,
+         "ph_odc": 7.4,
+         "hb_odc": 10,
+         "temp_odc": 37,
+         "dpg_odc": 5
       },
-      "kidneys":{
-         "name":"kidneys",
-         "description":"",
-         "model_type":"Kidneys",
-         "is_enabled": false 
-      }, 
       "custom_model_example":{
          "name":"CustomModelExample",
          "description":"",
