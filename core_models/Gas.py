@@ -25,6 +25,7 @@ class Gas:
         # now transform the components with content gas into gas components
         for comp_name, comp in model.components.items():
             if ((comp.model_type in self.target_models) and comp.content == 'gas'):
+                self.gas_components.append(comp)
                 # now prepare the object for being a gas containing object
                 setattr(comp, 'mix_gas', self.mix_gas)
                 setattr(comp, 'p_atm', self.p_atm)
@@ -32,7 +33,7 @@ class Gas:
                 setattr(comp, 'c_total_dry', 0)
                 # set the gas compounds as attributes of the model component
                 for compound, value in self.compounds.items():
-                    setattr(comp, "f" + compound, value)
+                    setattr(comp, "f" + compound, 0)
                     setattr(comp, "c" + compound, 0)
                     setattr(comp, "p" + compound, 0)
                 # set the temperature and the water vapour pressure which is temperature dependent
@@ -40,10 +41,16 @@ class Gas:
                     if temp == comp.name:
                         setattr(comp, "temp", self.temp_settings[temp])
                         setattr(comp, "ph2o", self.calculate_water_vapour_pressure(self.temp_settings[temp]))
+                # set the dry air compensation
+                for compound, value in self.dry_air.items():
+                    setattr(comp, compound, value)
+                    
                 
                 
     def model_step(self):
-        pass
+        if self.is_enabled:
+            for comp in self.gas_components:
+                self.calculate_gas_composition(comp)
     
     def calculate_water_vapour_pressure(self, temp):
         # calculate the water vapour pressure in air with temperature temp
@@ -85,8 +92,6 @@ class Gas:
                 # store the new concentration in the component receiving the blood
                 setattr(comp_to, fraction, new_fraction)
 
-            
-            self.calculate_gas_composition(comp_to)
             
            
                 

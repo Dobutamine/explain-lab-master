@@ -1025,29 +1025,6 @@
          "breath_duration": 1,
          "targets": ["CHEST_L","CHEST_R"] 
       },
-      "acidbase":{
-         "name":"acidbase",
-         "description":"",
-         "model_type":"Acidbase",
-         "is_enabled": false,
-         "targets": ["AA", "LL", "RL"],
-         "sid": 41.6,
-         "uma": 10.0,
-         "albumin": 30.0,
-         "phosphates": 1.5 
-      },
-      "oxygenation":{
-         "name":"oxygenation",
-         "description":"",
-         "model_type":"Oxygenation",
-         "is_enabled": false,
-         "targets": ["AA", "LL", "RL"],
-         "alpha_o2p": 0.0095,
-         "ph_odc": 7.4,
-         "hb_odc": 10,
-         "temp_odc": 37,
-         "dpg_odc": 5
-      },
       "custom_model_example":{
          "name":"CustomModelExample",
          "description":"",
